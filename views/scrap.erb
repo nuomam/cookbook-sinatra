@@ -1,0 +1,13 @@
+<ul>
+  <% @cookbook_parsed.each_with_index do |recipe, index| %>
+    <li><%= "#{index +1}. #{recipe[:name]}" %></li>
+  <% end %>
+</ul>
+<h1>Quelle numéro de recette souhaitez vous importer ?</h1>
+<form method="POST" action="/item_import">
+  <div class="form-group">
+    <label for="ingredient">Quel index importer ?</label>
+    <input type="content  " class="form-control" placeholder="Index à supprimer ?" name="index">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
